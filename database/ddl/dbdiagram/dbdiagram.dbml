@@ -1,0 +1,85 @@
+Table users {
+  id uuid [primary key]
+  name varchar(50) [not null]
+  last_name varchar(100) [null]
+  email varchar(254) [not null, unique]
+  password_hash varchar(255) [not null]
+  birth_date date [not null]
+  created_at datetime2 [default: `sysdatetime()`]
+}
+
+Table recurrence {
+  id uuid [primary key]
+  day_of_month tinyint [null]
+  days_of_week tinyint [null]
+  week_of_month tinyint [null]
+  months_of_year smallint [not null]
+
+}
+
+Table status_of_routines {
+  id tinyint [primary key, increment]
+  name varchar(50) [not null]
+}
+
+Table routines {
+  id uuid [primary key]
+  name varchar(100)
+  description varchar(255) [null]
+  created_at datetime2 [default: `sysdatetime()`]
+  start_at datetime2 [null]
+
+  recurrence_id uuid [not null, unique]
+  user_id uuid [not null]
+  goal_id uuid [null]
+  status_of_routines_id tinyint [not null]
+}
+
+Table status_of_goals {
+  id tinyint [primary key, increment]
+  name varchar(50) [not null]
+}
+
+Table goals {
+  id uuid [primary key]
+  name varchar(100) [not null]
+  description varchar(255) [null]
+  progress decimal(5,2) [check: `progress between 0 and 100`,not null, default: 0]
+
+  created_at datetime2 [default: `sysdatetime()`]
+  to_finish_at date [null]
+  finished_at date [null]
+
+  status_id tinyint [not null, default: 1]
+  user_id uuid [not null]
+}
+
+Table tasks {
+  id uuid [primary key] 
+  name varchar(100) [not null]
+  description varchar(255) [null]
+  allows_multiple_completions bit [not null, default: 1]
+  created_at datetime2 [not null, default: `sysdatetime()`]
+
+  user_id uuid [not null]
+  goal_id uuid [null]
+  routine_id uuid [null]
+}
+
+Table task_history {
+  id uuid [primary key]
+  scheduled_for date [not null]
+  completed_at datetime2 [not null, default: `sysdatetime()`]
+  task_id uuid [not null]
+}
+
+Ref: status_of_goals.id > goals.status_id
+Ref: recurrence.id - routines.recurrence_id
+Ref: users.id < routines.user_id
+Ref: users.id < goals.user_id
+Ref: users.id < tasks.user_id
+Ref: goals.id < routines.goal_id
+Ref: goals.id < tasks.goal_id
+Ref: routines.id < tasks.routine_id
+Ref: status_of_routines.id < routines.status_of_routines_id
+Ref: tasks.id < task_history.task_id
