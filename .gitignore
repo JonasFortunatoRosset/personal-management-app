@@ -1,0 +1,50 @@
+### Spring Boot / Gradle ###
+back-end/HELP.md
+back-end/.gradle/
+back-end/build/
+
+# Gradle Wrapper
+!back-end/gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+back-end/.apt_generated/
+back-end/.classpath
+back-end/.factorypath
+back-end/.project
+back-end/.settings/
+back-end/.springBeans
+back-end/.sts4-cache/
+back-end/bin/
+
+### IntelliJ IDEA ###
+back-end/.idea/
+back-end/*.iws
+back-end/*.iml
+back-end/*.ipr
+back-end/out/
+
+### NetBeans ###
+back-end/nbproject/private/
+back-end/nbbuild/
+back-end/dist/
+back-end/nbdist/
+back-end/.nb-gradle/
+
+### VS Code ###
+back-end/.vscode/
+
+### Spring Boot ###
+back-end/src/main/resources/application.properties
+
+### Environment / Secrets ###
+back-end/.env
+back-end/.env.*
+!back-end/.env.example
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Logs ###
+back-end/*.log
+back-end/logs/
