@@ -1,4 +1,4 @@
-package com.jns.personalappmanager.exception;
+package com.jns.personalmanagementapp.exception;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException(String message) {

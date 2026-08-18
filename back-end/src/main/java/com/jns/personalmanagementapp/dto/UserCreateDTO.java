@@ -1,4 +1,4 @@
-package com.jns.personalappmanager.dto;
+package com.jns.personalmanagementapp.dto;
 
 
 import jakarta.validation.constraints.Email;

@@ -1,6 +1,6 @@
-package com.jns.personalappmanager.repository;
+package com.jns.personalmanagementapp.repository;
 
-import com.jns.personalappmanager.model.User;
+import com.jns.personalmanagementapp.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

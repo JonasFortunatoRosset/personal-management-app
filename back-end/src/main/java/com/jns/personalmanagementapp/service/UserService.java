@@ -1,12 +1,12 @@
-package com.jns.personalappmanager.service;
+package com.jns.personalmanagementapp.service;
 
-import com.jns.personalappmanager.dto.UserCreateDTO;
-import com.jns.personalappmanager.dto.UserResponseDTO;
-import com.jns.personalappmanager.dto.UserUpdateDTO;
-import com.jns.personalappmanager.exception.EmailAlreadyExistsException;
-import com.jns.personalappmanager.exception.UserNotFoundException;
-import com.jns.personalappmanager.model.User;
-import com.jns.personalappmanager.repository.UserRepository;
+import com.jns.personalmanagementapp.dto.UserCreateDTO;
+import com.jns.personalmanagementapp.dto.UserResponseDTO;
+import com.jns.personalmanagementapp.dto.UserUpdateDTO;
+import com.jns.personalmanagementapp.exception.EmailAlreadyExistsException;
+import com.jns.personalmanagementapp.exception.UserNotFoundException;
+import com.jns.personalmanagementapp.model.User;
+import com.jns.personalmanagementapp.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

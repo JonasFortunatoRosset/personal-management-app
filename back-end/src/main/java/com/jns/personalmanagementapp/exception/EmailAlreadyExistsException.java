@@ -1,4 +1,4 @@
-package com.jns.personalappmanager.exception;
+package com.jns.personalmanagementapp.exception;
 
 public class EmailAlreadyExistsException extends RuntimeException {
     public EmailAlreadyExistsException(String message) {

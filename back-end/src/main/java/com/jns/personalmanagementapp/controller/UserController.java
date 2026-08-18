@@ -1,9 +1,9 @@
-package com.jns.personalappmanager.controller;
+package com.jns.personalmanagementapp.controller;
 
-import com.jns.personalappmanager.dto.UserCreateDTO;
-import com.jns.personalappmanager.dto.UserResponseDTO;
-import com.jns.personalappmanager.dto.UserUpdateDTO;
-import com.jns.personalappmanager.service.UserService;
+import com.jns.personalmanagementapp.dto.UserCreateDTO;
+import com.jns.personalmanagementapp.dto.UserResponseDTO;
+import com.jns.personalmanagementapp.dto.UserUpdateDTO;
+import com.jns.personalmanagementapp.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

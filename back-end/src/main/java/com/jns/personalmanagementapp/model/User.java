@@ -1,4 +1,4 @@
-package com.jns.personalappmanager.model;
+package com.jns.personalmanagementapp.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,6 +16,7 @@ public class User {
 
     @Id
     @UuidGenerator(style = UuidGenerator.Style.VERSION_7)
+    @Column(updatable = false)
     private UUID id;
 
     @Column(nullable = false, length = 50)

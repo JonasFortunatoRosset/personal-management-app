@@ -1,4 +1,4 @@
-package com.jns.personalappmanager.configuration;
+package com.jns.personalmanagementapp.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

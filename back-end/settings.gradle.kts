@@ -1,1 +1,1 @@
-rootProject.name = "personal-app-manager"
+rootProject.name = "personal-management-app"
