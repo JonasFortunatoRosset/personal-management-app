@@ -9,15 +9,16 @@ import org.hibernate.annotations.UuidGenerator;
 import java.util.UUID;
 
 @Entity
-@Table(name = "status_of_routines")
-public class StatusOfRoutine {
+@Table(name = "status_of_goals")
+public class StatusOfGoal {
+
     @Id
     @UuidGenerator(style = UuidGenerator.Style.VERSION_7)
     private UUID id;
     @Column(insertable = false, updatable = false)
     private String name;
 
-    public StatusOfRoutine() {
+    public StatusOfGoal() {
     }
 
     public UUID getId() {
