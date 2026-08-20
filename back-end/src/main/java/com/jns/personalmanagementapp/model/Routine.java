@@ -1,12 +1,16 @@
 package com.jns.personalmanagementapp.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Entity
+@Table(name = "routines")
 public class Routine {
 
     @Id
@@ -27,8 +31,8 @@ public class Routine {
     private UUID userId;
     @Column(name = "goal_id")
     private UUID goalId;
-    @Column(name = "status_of_routine_id")
-    private UUID statusOfRoutineId;
+    @Column(name = "status_of_routines_id")
+    private Byte statusOfRoutineId;
 
     public Routine() {
     }
@@ -101,11 +105,11 @@ public class Routine {
         this.goalId = goalId;
     }
 
-    public UUID getStatusOfRoutineId() {
+    public Byte getStatusOfRoutineId() {
         return statusOfRoutineId;
     }
 
-    public void setStatusOfRoutineId(UUID statusOfRoutineId) {
+    public void setStatusOfRoutineId(Byte statusOfRoutineId) {
         this.statusOfRoutineId = statusOfRoutineId;
     }
 }

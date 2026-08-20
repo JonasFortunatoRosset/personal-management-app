@@ -33,6 +33,10 @@ public class Recurrence {
         return id;
     }
 
+    public void setId(UUID id){
+        this.id = id;
+    }
+
     public Byte getDayOfMonth() {
         return dayOfMonth;
     }
