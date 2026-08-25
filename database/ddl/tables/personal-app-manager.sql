@@ -68,6 +68,7 @@ CREATE TABLE [tasks] (
     [description] varchar(255),
     [allows_multiple_completions] bit NOT NULL DEFAULT (1),
     [created_at] datetime2 NOT NULL DEFAULT (sysdatetime()),
+    [scheduled_for] date NOT NULL,
     [deleted_at] datetime2,
     [user_id] uniqueidentifier NOT NULL,
     [goal_id] uniqueidentifier,

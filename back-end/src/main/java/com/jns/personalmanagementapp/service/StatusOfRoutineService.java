@@ -4,9 +4,11 @@ import com.jns.personalmanagementapp.dto.StatusOfRoutineResponseDTO;
 import com.jns.personalmanagementapp.exception.StatusOfRoutineNotFound;
 import com.jns.personalmanagementapp.model.StatusOfRoutine;
 import com.jns.personalmanagementapp.repository.StatusOfRoutineRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StatusOfRoutineService {
 
     private final StatusOfRoutineRepository statusOfRoutineRepository;
