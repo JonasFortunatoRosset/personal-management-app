@@ -6,13 +6,15 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public record RoutineCreateDTO(
-        @NotBlank String name,
+public record RoutineResponseDTO(
+        UUID id,
+        String name,
         String description,
+        LocalDateTime createdAt,
         LocalDateTime startAt,
-        @NotNull UUID recurrenceId,
-        @NotNull UUID userId,
+        LocalDateTime deletedAt,
+        UUID recurrenceId,
+        UUID userId,
         UUID goalId,
-        @NotNull Byte statusOfRoutinesId
-)
-{}
+        Byte statusOfRoutinesId
+) {}
