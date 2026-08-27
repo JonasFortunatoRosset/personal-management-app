@@ -107,8 +107,11 @@ public class TaskService {
     public TaskResponseDTO delete(UUID id){
 
         Task task = taskRepository.findById(id).orElseThrow(() -> new TaskNotFoundException("Task not found."));
-        task.setDeletedAt(LocalDateTime.now());
-        taskRepository.save(task);
+
+        if (task.getDeletedAt() == null){
+            task.setDeletedAt(LocalDateTime.now());
+            taskRepository.save(task);
+        }
 
         return createTaskResponseDTO(task);
 

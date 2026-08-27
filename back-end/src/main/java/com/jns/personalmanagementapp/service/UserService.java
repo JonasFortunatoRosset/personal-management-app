@@ -108,16 +108,18 @@ public class UserService {
 
     }
 
-    public Boolean deleteById(UUID id){
+    public UserResponseDTO deleteById(UUID id){
 
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User doesn't exist"));
 
-        user.setActive(false);
-        user.setDeletedAt(LocalDateTime.now());
+        if (user.getDeletedAt() == null){
+            user.setActive(false);
+            user.setDeletedAt(LocalDateTime.now());
+            userRepository.save(user);
+        }
 
-        userRepository.save(user);
-        return true;
+        return createUserResponseDTO(user);
 
     }
 

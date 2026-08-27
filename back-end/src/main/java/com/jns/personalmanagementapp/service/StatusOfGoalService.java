@@ -4,6 +4,7 @@ import com.jns.personalmanagementapp.dto.StatusOfGoalResponseDTO;
 import com.jns.personalmanagementapp.exception.StatusOfGoalNotFound;
 import com.jns.personalmanagementapp.model.StatusOfGoal;
 import com.jns.personalmanagementapp.repository.StatusOfGoalRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
